@@ -1,1 +1,221 @@
+/**
+ * CONTENTS
+ *
+ * NAVIGATION
+ *
+ * MAIN CONTENT
+ *
+ *IMAGES
+ *
+ * FOOTER
+ */
+
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
+.menu {
+  position:  relative;
+  display:   block;
+  width:     100%;
+  margin:    0 auto;
+}
+
+.menubtn{
+  background-color: green;
+  color:            #ff751a;
+  margin-top:       2vh;
+  padding:          1rem 3rem;
+  font-size:        1.3rem;
+  font-weight:      900;
+  position:         relative;
+  z-index:          0;
+  border-radius:    10px;
+  overflow:         hidden auto;
+ }
+
+.menubtn:focus {
+  outline:none;
+}
+
+
+.menubtn::after{
+  content:     '';
+  display:     block;
+  position:    absolute;
+  width:       var(--dropbtnAfterWidth);
+  height:      100%;
+  background:  linear-gradient(yellow,red,white);
+  z-index:    -1;
+  top:         0;
+  left:        calc(50% - (var(--dropbtnAfterWidth) / 2));
+  animation:   moving 8s linear;
+  animation-iteration-count:3;
+  overflow:    hidden hidden;
+}
+
+@keyframes moving{
+	0%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
+  25%{left:calc(100% - var(--dropbtnAfterWidth));}
+  75%{left:0;}
+  100%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
+}
+
+
+.menu-content {
+  display:          none;
+  position:         absolute;
+  background-color: #ff751a;
+  min-width:        1rem;
+  border-radius:    10px;
+  z-index:          1;
+  width:            100%;
+ }
+
+
+.menu-content a {
+  color:           black;
+  padding:         .5rem .5rem;
+  text-decoration: none;
+  display:         block;
+}
+
+.menu-content a:hover {
+  background-color: black;
+  color:            white;
+}
+
+
+.menu:hover .menu-content {
+  display: block;
+}
+
+
+.menu:hover .menubtn {
+  background-color: black;
+  color:            white;
+}
+
+.menu-content > :first-child {
+  color: white;
+}
+
+
+/*------------------------------------*\
+  #MAIN CONTENT
+\*------------------------------------*/
+
+section{
+  text-align:  justify;
+  line-height: 1.5;
+  padding:     1rem;
+}
+
+section > :first-child {
+  font-style:  italic;
+  font-weight: bold;
+}
+
+ul{
+  list-style-type: circle;
+  padding-left:    1rem;
+}
+
+.fly-in {
+  height:    30rem;
+  overflow:  hidden;
+  position:  relative;
+  left:      0;
+}
+
+.fly-in span {
+  position:   absolute;
+  width:     100%;
+  height:    100%;
+  margin:    0;
+  text-align:justify;
+  animation: fly-in 3s linear;
+} 
+
+@keyframes fly-in {
+  0% {transform: translateY(-200%);}
+  100%{transform: translateY(0%);}
+}
+
+
+/*------------------------------------*\
+  #IMAGES
+\*------------------------------------*/
+
+/**
+ * The images on the page can have two different states:
+ *
+ * A) A regular image with the base size and no transition with opacity 0.7.
+ * B) A hovered image with an increased size and reverse with 180 deg.
+ *
+ */
+
+/**
+ * 1) These properties ensure that the images are next to each other in column with no transition and opacity 0.8.
+ * 2) When a card is hovered over, a transition is applied:
+ * - When a card is hovered over, its size increases by one tenth.
+ * - When a card is hovered over, it reverses with 180deg and it will have been no opacity.
+*
+*/
+
+.container{
+  display:        flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:    center;
+  padding:        2rem;
+}
+
+.img {
+  height:       80%;
+  width:        70%;
+  opacity:      .7;
+  border:       1px solid white;
+  border-radius:20px;
+  margin:       .5rem .5rem;
+  transition:   all 1s;
+ }
+
+
+
+.img:hover{
+  transform:scale(1.1)rotateY(180deg);
+  opacity:  1;
+}
+
+
+figcaption {
+  color:     black;
+  font-size: 1rem; 
+}
+	
+@media (max-width:768px){
+   .container {
+    transform: scale:(1.1);
+		zoom:      50%;
+	}
+	
+	
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+	
+.footer {
+  text-align: left;
+  padding:    1.5rem;
+  width:      100vw;
+  height:     2rem;
+  color:      white;
+}
+
+footer a {
+  text-decoration:none;
+  color:          green;
+  }
 
