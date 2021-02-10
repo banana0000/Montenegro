@@ -1,1 +1,322 @@
+/**Base.css/
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
 
+*:root{
+  --dropbtnAfterWidth:   40%;
+	--primary-font-color:  black;
+ }
+
+
+/*------------------------------------*\
+  #BOX-SIZING
+\*------------------------------------*/
+
+*{
+	box-sizing:border-box;
+}
+
+
+/*------------------------------------*\
+  #MARGINS
+\*------------------------------------*/
+
+*{
+  margin:  0;
+  padding: 0;
+}
+
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+h1 {
+  font-size:  1.4rem;
+  padding:    4rem 0rem 1rem;
+}
+
+h2 {
+	font-size: 1.3rem;
+}
+
+h3 {
+	font-size:  1.2rem;
+	padding:    1rem 0rem;
+	
+}
+
+/*------------------------------------*\
+  #BASE-FONT
+\*------------------------------------*/
+	html {
+  font-size:  1rem;
+  font-family: "Times New Roman", Arial, curier;
+  color:       var(--primary-font-color);
+}
+  
+/*Layout.css*/
+/*------------------------------------*\
+  #ELEMENTS
+\*------------------------------------*/
+
+body {
+  background-color:   white;
+  text-align:         center;
+  overflow:           hidden auto;
+	width:              calc(100%-1vh);
+  display:            grid;
+  grid-template-areas:"header header header"
+		                  "menu main sidebar"
+		                  "footer footer footer";
+  grid-template-columns:250px 1fr 250px;
+  grid-template-rows:   120px 1fr 120px;
+  grid-gap:             10px;
+  height:               100vh;
+}
+	
+
+/*------------------------------------*\
+  #MODIFIERS
+\*------------------------------------*/
+
+@media (max-width:768px){
+	 body {
+		grid-template-areas: 
+			              "header"
+			              "menu"
+			              "main"
+			              "sidebar"
+			              "footer";
+		grid-template-columns:100%;
+		grid-template-rows:   100px 90px 1fr 600px 60px;
+		}
+} 
+  
+.header {
+	grid-area:        header;
+	background-color: black;
+	color:            orange;
+	font-size:        1.4rem;
+	font-weight:      700;
+	display:          flex;
+	justify-content:  center;
+	align-items:      center;
+}
+
+.menu {
+	grid-area: menu;
+	background-color: yellow;
+}
+
+.main{
+	grid-area:       main;
+	background-color:lightgreen;
+}
+
+.sidebar {
+	grid-area:     sidebar;
+	background-color:green;
+}
+
+.footer {
+	grid-area:  footer;
+	background: black;
+}
+
+
+/*Components.css*/
+
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
+.menu {
+  position:  relative;
+  display:   block;
+  width:     100%;
+  margin:    0 auto;
+}
+
+.menubtn{
+  background-color: green;
+  color:            orange;
+  margin-top:       2vh;
+  padding:          1rem 3rem;
+  font-size:        1.3rem;
+  font-weight:      900;
+  position:         relative;
+  z-index:          0;
+  border-radius:    10px;
+  overflow:         hidden auto;
+ }
+
+.menubtn:focus {
+  outline:none;
+}
+
+.menubtn::after{
+  content:     '';
+  display:     block;
+  position:    absolute;
+  width:       var(--dropbtnAfterWidth);
+  height:      100%;
+  background:  linear-gradient(yellow,red,white);
+  z-index:    -1;
+  top:         0;
+  left:        calc(50% - (var(--dropbtnAfterWidth) / 2));
+  animation:   moving 8s linear;
+	animation-iteration-count:3;
+  overflow:    hidden hidden;
+}
+
+@keyframes moving{
+	0%{left:calc(50% - (var(--dropownAfterwidth) / 2));}
+	25%{left:calc(100% - var(--dropdownAfterWidth));}
+	75%{left:0;}
+	100%{left:calc(50% - (var(--dropdownAfterWidth) / 2));}
+}
+
+
+
+.menu-content {
+  display:          none;
+  position:         absolute;
+  background-color: orange;
+  min-width:        1rem;
+  border-radius:    10px;
+  z-index:          1;
+  width:            100%;
+ }
+
+
+.menu-content a {
+  color:           black;
+  padding:         .5rem .5rem;
+  text-decoration: none;
+  display:         block;
+}
+
+.menu-content a:hover {
+  background-color: black;
+  color:            white;
+}
+
+
+.menu:hover .menu-content {
+  display: block;
+}
+
+
+.menu:hover .menubtn {
+  background-color: black;
+  color:            white;
+}
+
+.menu-content > :first-child {
+  color: white;
+}
+
+
+/*------------------------------------*\
+  #MAIN CONTENT
+\*------------------------------------*/
+
+section{
+  text-align:  justify;
+  line-height: 1.5;
+  padding:     1rem;
+}
+
+section > :first-child {
+  font-style:  italic;
+  font-weight: bold;
+}
+
+ul{
+  list-style-type: circle;
+  padding-left:    1rem;
+}
+
+.fly-in {
+  height:    30rem;
+  overflow:  hidden;
+  position:  relative;
+  left:      0;
+}
+
+.fly-in span {
+  position:   absolute;
+  width:     100%;
+  height:    100%;
+  margin:    0;
+  text-align:justify;
+  animation: fly-in 3s linear;
+} 
+
+@keyframes fly-in {
+  0% {transform: translateY(-200%);}
+  100%{transform: translateY(0%);}
+}
+
+
+.container{
+  display:        flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:    center;
+  padding:        2rem;
+}
+
+.img {
+  height:     80%;
+  width:      70%;
+  opacity:    .7;
+  border: 1px solid white;
+  border-radius:20px;
+  margin:.5rem .5rem;
+  transition: all 1s;
+ }
+
+
+
+.img:hover{
+  transform:scale(1.1)rotateY(180deg);
+  opacity:  1;
+}
+
+
+figcaption {
+  color:black;
+  font-size:1rem; 
+}
+	
+@media (max-width:768px){
+   .container {
+    transform:scale:(1.1);
+		zoom:50%;
+	}
+	
+	
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+	
+.footer {
+  text-align:left;
+  padding:1.5rem;
+  width:100vw;
+  height:2rem;
+  color:white;
+}
+
+footer a {
+  text-decoration:none;
+  color:          blue;
+  }
+
+
+	 
+	 
