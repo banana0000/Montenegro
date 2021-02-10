@@ -1,1 +1,77 @@
+ * CONTENTS
+ *
+ * LAYOUT
+ * Elements.............Rules for the container and items
+ * Modifiers............Media queries for the layout.
+ */
+
+
+/*------------------------------------*\
+  #ELEMENTS
+\*------------------------------------*/
+
+body {
+  background-color:   white;
+  text-align:         center;
+  overflow:           hidden auto;
+	width:              calc(100%-1vh);
+  display:            grid;
+  grid-template-areas:"header header header"
+		                  "menu main sidebar"
+		                  "footer footer footer";
+  grid-template-columns:250px 1fr 250px;
+  grid-template-rows:   120px 1fr 120px;
+  grid-gap:             10px;
+  height:               100vh;
+}
+	
+
+/*------------------------------------*\
+  #MODIFIERS
+\*------------------------------------*/
+
+@media (max-width:768px){
+	 body {
+		grid-template-areas: 
+			              "header"
+			              "menu"
+			              "main"
+			              "sidebar"
+			              "footer";
+		grid-template-columns:100%;
+		grid-template-rows:   100px 90px 1fr 600px 60px;
+		}
+} 
+  
+.header {
+	grid-area:        header;
+	background-color: black;
+	color:            red;
+	font-size:        1.4rem;
+	font-weight:      700;
+	display:          flex;
+	justify-content:  center;
+	align-items:      center;
+}
+
+.menu {
+	grid-area: menu;
+	background-color: #ffff4d;
+}
+
+.main{
+	grid-area:       main;
+	background-color:#99ff66;
+}
+
+.sidebar {
+	grid-area:     sidebar;
+	background-color:#339900;
+}
+
+.footer {
+	grid-area:  footer;
+	background: #081a00;
+}
+
 
