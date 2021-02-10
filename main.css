@@ -305,11 +305,11 @@ figcaption {
 
 	
 .footer {
-  text-align:left;
+  text-align:left !important;
   padding:1.5rem;
   width:100vw;
   height:2rem;
-  color:white;
+  color:white !important;
 }
 
 .footer a {
