@@ -304,8 +304,8 @@ figcaption {
 	
 @media (max-width:768px){
    .container {
-    transform:scale:(1.1);
-		zoom:50%;
+    transform: scale:(1.1);
+	 zoom: 50%;
 	}
 	
 	
@@ -315,11 +315,11 @@ figcaption {
 
 	
 .footer {
-  text-align:left !important;
-  padding:1.5rem;
+  text-align:left;
+  padding:   1.5rem;
   width:100vw;
   height:2rem;
-  color:white !important;
+  color:white;
 }
 
 .footer a {
