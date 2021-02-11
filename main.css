@@ -76,6 +76,9 @@ body {
   height:               100vh;
 }
 
+.main0 {
+        background-color:lightgreen; 
+}
 .main1 {
 	background-color:pink;
 }
