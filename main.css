@@ -75,6 +75,16 @@ body {
   grid-gap:             10px;
   height:               100vh;
 }
+
+.main1 {
+	background-color:orange;
+}
+.main2 {
+	background-color:lightblue;
+}
+.main3 {
+	background-color:yellow;
+}
 	
 
 /*------------------------------------*\
