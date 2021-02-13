@@ -3,6 +3,8 @@
  *
  * NAVIGATION
  *
+ * ANIMATION
+ *
  * MAIN CONTENT
  *
  *IMAGES
@@ -38,28 +40,6 @@
   outline:none;
 }
 
-
-.menubtn::after{
-  content:     '';
-  display:     block;
-  position:    absolute;
-  width:       var(--dropbtnAfterWidth);
-  height:      100%;
-  background:  linear-gradient(yellow,red,white);
-  z-index:    -1;
-  top:         0;
-  left:        calc(50% - (var(--dropbtnAfterWidth) / 2));
-  animation:   moving 8s linear;
-  animation-iteration-count:3;
-  overflow:    hidden hidden;
-}
-
-@keyframes moving{
-	0%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
-  25%{left:calc(100% - var(--dropbtnAfterWidth));}
-  75%{left:0;}
-  100%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
-}
 
 
 .menu-content {
@@ -99,6 +79,38 @@
 .menu-content > :first-child {
   color: white;
 }
+
+*------------------------------------*\
+  #ANIMATION
+\*------------------------------------*/
+
+/**
+ * The animation runs threee timies and stops in the middle, so the title looks better.
+ *
+ /
+
+.menubtn::after{
+  content:     '';
+  display:     block;
+  position:    absolute;
+  width:       var(--dropbtnAfterWidth);
+  height:      100%;
+  background:  linear-gradient(yellow,red,white);
+  z-index:    -1;
+  top:         0;
+  left:        calc(50% - (var(--dropbtnAfterWidth) / 2));
+  animation:   moving 8s linear;
+  animation-iteration-count:3;
+  overflow:    hidden hidden;
+}
+
+@keyframes moving{
+	0%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
+  25%{left:calc(100% - var(--dropbtnAfterWidth));}
+  75%{left:0;}
+  100%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
+}
+
 
 
 /*------------------------------------*\
