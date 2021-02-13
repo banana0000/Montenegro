@@ -86,8 +86,7 @@
 
 /**
  * The animation runs threee timies and stops in the middle, so the title looks better.
- *
- /
+ */
 
 .menubtn::after{
   content:     '';
@@ -209,7 +208,7 @@ figcaption {
 @media (max-width:768px){
    .container {
     transform: scale:(1.1);
-		zoom:      50%;
+    zoom:      50%;
 	}
 	
 	
