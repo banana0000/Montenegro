@@ -127,11 +127,9 @@ ul{
 
 .fly-in {
   height:    30rem;
-  overflow:  hidden;
+  overflow:  hidden auto;
   position:  relative;
   left:      0;
-  overflow:  hidden auto;
-
 }
 
 .fly-in span {
