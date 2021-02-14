@@ -130,6 +130,8 @@ ul{
   overflow:  hidden;
   position:  relative;
   left:      0;
+  overflow:  hidden;
+
 }
 
 .fly-in span {
