@@ -15,7 +15,7 @@ body {
   background-color:   white;
   text-align:         center;
   overflow:           hidden auto;
-	width:              calc(100%-1vh);
+	width:        100%;
   display:            grid;
   grid-template-areas:"header header header"
 		       "menu main sidebar"
