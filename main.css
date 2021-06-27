@@ -65,7 +65,7 @@ body {
   background-color:   white;
   text-align:         center;
   overflow:           hidden auto;
-	width:              calc(100%-1vh);
+  width:              calc(100%-1vh);
   display:            grid;
   grid-template-areas:"header header header"
 		       "menu main sidebar"
@@ -185,7 +185,7 @@ body {
 }
 
 @keyframes moving{
-	0%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
+  0%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
   25%{left:calc(100% - var(--dropbtnAfterWidth));}
   75%{left:0;}
   100%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
@@ -296,7 +296,7 @@ ul{
 
 
 .img:hover{
-  transform:scale(1.1)rotateY(180deg);
+  transform:scale(1.1);
   opacity:  1;
 }
 
