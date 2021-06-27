@@ -179,20 +179,8 @@ body {
   z-index:    -1;
   top:         0;
   left:        calc(50% - (var(--dropbtnAfterWidth) / 2));
-  animation:   moving 8s linear;
-  animation-iteration-count:3;
   overflow:    hidden hidden;
 }
-
-@keyframes moving{
-  0%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
-  25%{left:calc(100% - var(--dropbtnAfterWidth));}
-  75%{left:0;}
-  100%{left:calc(50% - (var(--dropbtnAfterWidth) / 2));}
-}
-
-
-
 
 .menu-content {
   display:          none;
