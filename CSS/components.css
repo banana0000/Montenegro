@@ -47,7 +47,7 @@
   position:    absolute;
   width:       var(--dropbtnAfterWidth);
   height:      100%;
-  background:  linear-gradient(yellow,red,white);
+  background:  linear-gradient(orange,white);
   z-index:    -1;
   top:         0;
   left:        calc(50% - (var(--dropbtnAfterWidth) / 2));
@@ -168,7 +168,7 @@ ul{
 
 
 .img:hover{
-  transform:scale(1.1)rotateY(180deg);
+  transform:scale(1.1);
   opacity:  1;
 }
 
