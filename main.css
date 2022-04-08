@@ -4,8 +4,7 @@
 \*------------------------------------*/
 
 *:root {
-  --dropbtnAfterWidth: 40%;
-  --primary-font-color: black;
+  --primary-font-color: rgb(55, 51, 51);
 }
 
 
@@ -32,17 +31,20 @@
   #HEADINGS
 \*------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100&display=swap');
+
 h1 {
   font-size: 1.4rem;
+  font-style:italic;
   padding: 4rem 0rem 1rem;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 1rem 0rem;
 
 }
@@ -52,7 +54,7 @@ h3 {
 \*------------------------------------*/
 html {
   font-size: 1rem;
-  font-family: "Times New Roman", Arial, curier;
+  font-family: 'Roboto', sans-serif;
   color: var(--primary-font-color);
 }
 
@@ -70,26 +72,26 @@ body {
   grid-template-areas: "header header header"
     "menu main sidebar"
     "footer footer footer";
-  grid-template-columns: 300px 1fr 300px;
+  grid-template-columns: 250px 1fr 300px;
   grid-template-rows: 120px 1fr 120px;
   grid-gap: 5px;
   height: 100vh;
 }
 
 .main0 {
-  background: linear-gradient(white, rgb(133, 229, 232));
+  background: linear-gradient(75deg, white, rgb(133, 229, 232));
 }
 
 .main1 {
-  background: linear-gradient(white, rgb(210, 150, 160));
+  background: linear-gradient(75deg, white, rgb(210, 150, 160));
 }
 
 .main2 {
-  background: linear-gradient(white, rgb(134, 200, 223));
+  background: linear-gradient(75deg, white, rgb(134, 200, 223));
 }
 
 .main3 {
-  background: linear-gradient(white, rgba(204, 152, 54, 0.711));
+  background: linear-gradient(75deg, white, rgba(204, 152, 54, 0.711));
 }
 
 
@@ -113,9 +115,9 @@ body {
 .header {
   grid-area: header;
   background-color: black;
-  color: rgb(247, 220, 232);
+  color: rgb(70, 210, 238);
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,17 +125,17 @@ body {
 
 .menu {
   grid-area: menu;
-  background: linear-gradient(white, rgb(237, 237, 37));
+  background: linear-gradient(75deg,white, rgb(237, 237, 37));
 }
 
 .main {
   grid-area: main;
-  background: linear-gradient(white, lightgreen);
+  background: linear-gradient(75deg, white, lightgreen);
 }
 
 .sidebar {
   grid-area: sidebar;
-  background: linear-gradient(white, rgb(10, 127, 245));
+  background: linear-gradient(75deg, white, rgb(10, 127, 245));
 }
 
 .footer {
@@ -142,11 +144,12 @@ body {
   padding: 1.5rem;
   width: 100vw;
   color: white;
-  background: black;
+  background: rgb(19, 19, 19);
 }
 
 .footer a {
   text-decoration: none;
+  color:rgb(239, 165, 29);
 }
 
 .footer>a:hover {
@@ -168,8 +171,7 @@ body {
 
 .menubtn {
   background-color: rgb(22, 25, 22);
-  color: rgb(243, 163, 13);
-  margin-top: 2vh;
+  color: rgb(228, 244, 87);
   padding: 1rem 3rem;
   font-size: 1.3rem;
   font-weight: 900;
@@ -186,8 +188,8 @@ body {
 .menu-content {
   display: none;
   position: absolute;
-  background-color: rgb(65, 60, 55);
-  color: rgb(205, 188, 188);
+  background-color: rgb(19, 19, 2);
+  color: white;
   min-width: 1rem;
   border-radius: 0px;
   z-index: 0;
@@ -196,15 +198,14 @@ body {
 
 
 .menu-content a {
-  color: rgb(121, 102, 102);
+  color: white;
   padding: .5rem .5rem;
   text-decoration: none;
   display: block;
 }
 
 .menu-content a:hover {
-  background-color: black;
-  color: white;
+  background-color: rgb(233, 238, 239);
 }
 
 
@@ -213,13 +214,20 @@ body {
 }
 
 
-.menu:hover .menubtn {
-  background-color: rgb(233, 212, 16);
-  color: white;
+.menu-content> :first-child {
+  color:rgb(133, 229, 232));
 }
 
-.menu-content> :first-child {
-  color: rgb(218, 216, 81);
+.menu-content> :nth-child(2) {
+  color:rgb(210, 150, 160);
+}
+
+.menu-content> :nth-child(3) {
+  color:rgb(134, 200, 223);
+}
+
+.menu-content> :nth-child(4) {
+  color:rgba(204, 152, 54, 0.711);
 }
 
 
@@ -282,9 +290,8 @@ ul {
 .img {
   height: 100%;
   width: 100%;
-  opacity: .7;
-  border: 1px solid white;
-  border-radius: 2px;
+  opacity: .5;
+  border-radius: 20px;
   margin: .5rem .5rem;
   transition: all 1s;
 }
@@ -299,11 +306,12 @@ ul {
 
 figcaption {
   color: black;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 1rem;
 }
 
 @media (max-width:768px) {
-  .container {
+  .img{
     zoom: 50%;
   }
 
@@ -312,6 +320,8 @@ figcaption {
   }
 
   .img {
+    height:250px;
+    width:400px;
     opacity: .5;
   }
   .img:hover {
