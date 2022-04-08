@@ -65,14 +65,14 @@ body {
   background-color: white;
   text-align: center;
   overflow: hidden auto;
-  width: calc(100%-1vh);
+  width: calc(100%-10vw);
   display: grid;
   grid-template-areas: "header header header"
     "menu main sidebar"
     "footer footer footer";
-  grid-template-columns: 250px 1fr 250px;
+  grid-template-columns: 300px 1fr 300px;
   grid-template-rows: 120px 1fr 120px;
-  grid-gap: 10px;
+  grid-gap: 5px;
   height: 100vh;
 }
 
@@ -106,7 +106,7 @@ body {
       "sidebar"
       "footer";
     grid-template-columns: 100%;
-    grid-template-rows: 100px 90px 1fr 600px 60px;
+    grid-template-rows: 100px 90px 1fr 600px 100px;
   }
 }
 
@@ -141,7 +141,6 @@ body {
   text-align: center;
   padding: 1.5rem;
   width: 100vw;
-  height: 5rem;
   color: white;
   background: black;
 }
@@ -184,19 +183,6 @@ body {
   outline: none;
 }
 
-/*.menubtn::after{
-  content:     '';
-  display:     block;
-  position:    absolute;
-  width:       var(--dropbtnAfterWidth);
-  height:      100%;
-  background:  linear-gradient(45deg,green,white);
-  z-index:    -1;
-  top:         0;
-  left:        calc(50% - (var(--dropbtnAfterWidth) / 2));
-  overflow:    hidden hidden;
-}*/
-
 .menu-content {
   display: none;
   position: absolute;
@@ -204,7 +190,7 @@ body {
   color: rgb(205, 188, 188);
   min-width: 1rem;
   border-radius: 0px;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
 }
 
@@ -289,15 +275,16 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  margin: 2rem;
+  gap: 20px;
 }
 
 .img {
   height: 100%;
   width: 100%;
-  opacity: .9;
+  opacity: .7;
   border: 1px solid white;
-  border-radius: 50%;
+  border-radius: 2px;
   margin: .5rem .5rem;
   transition: all 1s;
 }
@@ -317,11 +304,26 @@ figcaption {
 
 @media (max-width:768px) {
   .container {
-    transform: scale:(1.1);
     zoom: 50%;
   }
 
+  .menubtn {
+    height:80px;
+  }
 
-  /*------------------------------------*\
+  .img {
+    opacity: .5;
+  }
+  .img:hover {
+    transform: scale(1);
+    opacity: 1;
+  }
+  .footer {
+    height:150px;
+  }
+}
+
+
+/*------------------------------------*\
   #FOOTER
 \*------------------------------------*/
