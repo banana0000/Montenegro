@@ -78,22 +78,6 @@ body {
   height: 100vh;
 }
 
-.main0 {
-  background: linear-gradient(75deg, white, rgb(133, 229, 232));
-}
-
-.main1 {
-  background: linear-gradient(75deg, white, rgb(210, 150, 160));
-}
-
-.main2 {
-  background: linear-gradient(75deg, white, rgb(134, 200, 223));
-}
-
-.main3 {
-  background: linear-gradient(75deg, white, rgba(204, 152, 54, 0.711));
-}
-
 
 /*------------------------------------*\
   #MODIFIERS
@@ -115,7 +99,7 @@ body {
 .header {
   grid-area: header;
   background-color: black;
-  color: rgb(70, 210, 238);
+  color:cyan;
   font-size: 1.4rem;
   font-weight: 900;
   display: flex;
@@ -125,17 +109,17 @@ body {
 
 .menu {
   grid-area: menu;
-  background: linear-gradient(75deg,white, rgb(237, 237, 37));
+  background: linear-gradient(75deg,white, cyan);
 }
 
 .main {
   grid-area: main;
-  background: linear-gradient(75deg, white, lightgreen);
+  background: linear-gradient(75deg, white, cyan);
 }
 
 .sidebar {
   grid-area: sidebar;
-  background: linear-gradient(75deg, white, rgb(10, 127, 245));
+  background: linear-gradient(75deg, white, cyan);
 }
 
 .footer {
@@ -153,7 +137,7 @@ body {
 }
 
 .footer>a:hover {
-  color: green;
+  opacity: .5;
 }
 
 /*Components.css*/
@@ -171,7 +155,7 @@ body {
 
 .menubtn {
   background-color: rgb(22, 25, 22);
-  color: rgb(228, 244, 87);
+  color: rgb(231, 163, 37);
   padding: 1rem 3rem;
   font-size: 1.3rem;
   font-weight: 900;
@@ -205,7 +189,7 @@ body {
 }
 
 .menu-content a:hover {
-  background-color: rgb(233, 238, 239);
+  background-color:rgb(231, 163, 37);
 }
 
 
@@ -215,19 +199,7 @@ body {
 
 
 .menu-content> :first-child {
-  color:rgb(133, 229, 232));
-}
-
-.menu-content> :nth-child(2) {
-  color:rgb(210, 150, 160);
-}
-
-.menu-content> :nth-child(3) {
-  color:rgb(134, 200, 223);
-}
-
-.menu-content> :nth-child(4) {
-  color:rgba(204, 152, 54, 0.711);
+  color:white;
 }
 
 
@@ -290,8 +262,7 @@ ul {
 .img {
   height: 100%;
   width: 100%;
-  opacity: .5;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: .5rem .5rem;
   transition: all 1s;
 }
@@ -300,7 +271,6 @@ ul {
 
 .img:hover {
   transform: scale(1.1);
-  opacity: 1;
 }
 
 
@@ -315,21 +285,12 @@ figcaption {
     zoom: 50%;
   }
 
-  .menubtn {
-    height:80px;
+   .menubtn {
+    height:90px;
   }
 
-  .img {
-    height:250px;
-    width:400px;
-    opacity: .5;
-  }
-  .img:hover {
-    transform: scale(1);
-    opacity: 1;
-  }
-  .footer {
-    height:150px;
+   .footer {
+    height:200px;
   }
 }
 
