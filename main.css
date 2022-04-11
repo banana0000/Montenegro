@@ -1,37 +1,21 @@
-/**Base.css/
-/*------------------------------------*\
-  #VARIABLES
-\*------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100&display=swap');
 
 *:root {
   --primary-font-color: rgb(55, 51, 51);
 }
 
 
-/*------------------------------------*\
-  #BOX-SIZING
-\*------------------------------------*/
-
 * {
   box-sizing: border-box;
 }
 
 
-/*------------------------------------*\
-  #MARGINS
-\*------------------------------------*/
 
 * {
   margin: 0;
   padding: 0;
 }
 
-
-/*------------------------------------*\
-  #HEADINGS
-\*------------------------------------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100&display=swap');
 
 h1 {
   font-size: 1.4rem;
@@ -49,22 +33,16 @@ h3 {
 
 }
 
-/*------------------------------------*\
-  #BASE-FONT
-\*------------------------------------*/
+
 html {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
-  color: var(--primary-font-color);
-}
+  }
 
-/*Layout.css*/
-/*------------------------------------*\
-  #ELEMENTS
-\*------------------------------------*/
 
 body {
-  background-color: white;
+  background:white;
+  background-size: cover;
   text-align: center;
   overflow: hidden auto;
   width: calc(100%-10vw);
@@ -77,11 +55,6 @@ body {
   grid-gap: 5px;
   height: 100vh;
 }
-
-
-/*------------------------------------*\
-  #MODIFIERS
-\*------------------------------------*/
 
 @media (max-width:768px) {
   body {
@@ -98,7 +71,7 @@ body {
 
 .header {
   grid-area: header;
-  background-color: black;
+  background-color:rgb(49, 49, 119);
   color:cyan;
   font-size: 1.4rem;
   font-weight: 900;
@@ -109,17 +82,17 @@ body {
 
 .menu {
   grid-area: menu;
-  background: linear-gradient(75deg,white, cyan);
+  background: linear-gradient(75deg, cyan, white);
 }
 
 .main {
   grid-area: main;
-  background: linear-gradient(75deg, white, cyan);
+  background: linear-gradient(75deg, cyan, white);
 }
 
 .sidebar {
   grid-area: sidebar;
-  background: linear-gradient(75deg, white, cyan);
+  background: linear-gradient(75deg, cyan ,white);
 }
 
 .footer {
@@ -128,7 +101,7 @@ body {
   padding: 1.5rem;
   width: 100vw;
   color: white;
-  background: rgb(19, 19, 19);
+  background: rgb(49, 49, 119););
 }
 
 .footer a {
@@ -140,11 +113,6 @@ body {
   opacity: .5;
 }
 
-/*Components.css*/
-
-/*------------------------------------*\
-  #NAVIGATION
-\*------------------------------------*/
 
 .menu {
   position: relative;
@@ -154,7 +122,7 @@ body {
 }
 
 .menubtn {
-  background-color: rgb(22, 25, 22);
+  background-color: rgb(49, 49, 119);
   color: rgb(231, 163, 37);
   padding: 1rem 3rem;
   font-size: 1.3rem;
@@ -172,7 +140,7 @@ body {
 .menu-content {
   display: none;
   position: absolute;
-  background-color: rgb(19, 19, 2);
+  background-color:rgb(49, 49, 119);
   color: white;
   min-width: 1rem;
   border-radius: 0px;
@@ -202,10 +170,9 @@ body {
   color:white;
 }
 
-
-/*------------------------------------*\
-  #MAIN CONTENT
-\*------------------------------------*/
+iframe {
+  margin-top:15rem;
+}
 
 section {
   text-align: justify;
@@ -292,9 +259,10 @@ figcaption {
    .footer {
     height:200px;
   }
+
+  iframe {
+    visibility:hidden;
+  }
 }
 
 
-/*------------------------------------*\
-  #FOOTER
-\*------------------------------------*/
